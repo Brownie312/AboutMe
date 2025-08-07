@@ -9,7 +9,7 @@
     :root {
       --bg: #0f0f0f;
       --text: #ffffff;
-      --accent: #00ffb3;
+      --accent: #0080ff; /* Changed from teal to blue */
       --card-bg: #1c1c1c;
     }
 
@@ -45,7 +45,7 @@
       background: var(--card-bg);
       border-radius: 12px;
       padding: 2.5rem;
-      box-shadow: 0 0 20px rgba(0, 255, 179, 0.25);
+      box-shadow: 0 0 20px rgba(0, 128, 255, 0.25); /* blue shadow */
       transition: background 0.3s ease;
       animation: fadeIn 1s ease-in-out;
     }
@@ -123,20 +123,6 @@
       margin-bottom: 0.5rem;
     }
 
-    .toggle {
-      position: absolute;
-      top: 20px;
-      right: 30px;
-      background: var(--accent);
-      color: #000;
-      border: none;
-      padding: 0.5rem 1rem;
-      border-radius: 6px;
-      font-weight: bold;
-      cursor: pointer;
-      transition: background 0.3s ease;
-    }
-
     @media (max-width: 700px) {
       .projects {
         grid-template-columns: 1fr;
@@ -149,7 +135,6 @@
   </style>
 </head>
 <body>
-  <button class="toggle" onclick="toggleMode()">Toggle Mode</button>
   <div class="container">
     <h1>Brownie</h1>
     <p class="tagline">Indie Dev | Creator | Always building something fun</p>
@@ -177,11 +162,5 @@
       </div>
     </div>
   </div>
-
-  <script>
-    function toggleMode() {
-      document.body.classList.toggle('light');
-    }
-  </script>
 </body>
 </html>
